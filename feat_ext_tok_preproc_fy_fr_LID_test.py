@@ -1,5 +1,5 @@
 from huggingface_hub import login
-login(token="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")
+login(token="hf_")
 
 from datasets import Audio
 import evaluate
