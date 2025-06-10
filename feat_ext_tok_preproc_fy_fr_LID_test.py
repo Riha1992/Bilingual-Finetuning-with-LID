@@ -6,73 +6,8 @@ import evaluate
 #model_number = "36"
 
 
-#target_checkpoint="30100"
-#model_name = "wav2vec2_fy_common_voice_"
-#model_id=model_name+model_number
-#model_id="wav2vec2_fy_nl_common_voice_41"
-#model_id="wav2vec2_fy_nl_lid_common_voice_42"
-#model_id="wav2vec2_fy_nl_en_common_voice_43"
-#model_id="wav2vec2_fy_nl_en_common_voice_54"
-#model_id="wav2vec2_fy_nl_en_lid_common_voice_55"
-#model_id="wav2vec2_fy_nl_de_lid_common_voice_57" # uses 1960 rows of nl  de data
-#model_id="wav2vec2_fy_nl_en_lid_common_voice_51"
-#model_id="wav2vec2_fy_nl_de_common_voice_48"
-#model_id="wav2vec2_fy_nl_de_lid_common_voice_50" # 20%
-#model_id="wav2vec2_fy_nl_de_lid_common_voice_52" #13.2
-#model_id="wav2vec2_fy_nl_de_en_common_voice_?"
-#model_id="wav2vec2_fy_nl_en_lid_common_voice_44"
 
 
-
-#**************************************************************
-
-#model_id="wav2vec2_fy_common_voice_46"
-#model_id="wav2vec2_fy_nl_de_lid_common_voice_53"
-#model_id="wav2vec2_fy_nl_common_voice_41"
-#model_id="wav2vec2_fy_nl_lid_common_voice_42"
-#model_id="wav2vec2_fy_nl_de_common_voice_48"
-#model_id="wav2vec2_fy_nl_en_de_common_voice_45"
-#model_id="wav2vec2_fy_nl_de_lid_sprklb_R7_R12_common_voice_60"
-#model_id="wav2vec2_fy_nl_de_lid_sprklb_R15_R16_R20_common_voice_61"
-#model_id="wav2vec2_fy_nl_de_lid_sprklb_R1_R5_R6_common_voice_62"
-#model_id="wav2vec2_fy_nl_de_lid_sprklb_R1_R5_R6_R7_R12_R15_R16_R20_common_voice_63"
-#model_id="wav2vec2_fy_nl_de_lid_sprklb_R2_R3_R4_R8_R10_R9_R13_R14_common_voice_64"
-#model_id="wav2vec2_fy_nl_de_lid_sprklb_R2_R3_R4_R8_R10_R9_R13_R14_common_voice_68"
-#model_id="wav2vec2_fy_nl_de_lid_sprklb_R1_R5_R6_R7_R12_R15_R16_R20_common_voice_67"
-#model_id="wav2vec2_fy_nl_de_lid_sprklb_R2_R3_R4_R8_R10_R9_R13_R14_common_voice_66"
-#model_id="wav2vec2_fy_nl_de_lid_sprklb_R1_R5_R6_R7_R12_R15_R16_R20_common_voice_65"
-#model_id="wav2vec2_fy_nl_en_de_lid_common_voice_47"
-
-#model_id="wav2vec2_fy_common_voice_91"
-#model_id="wav2vec2_fy_common_voice_92"
-#model_id="wav2vec2_fy_common_voice_93"
-#model_id="wav2vec2_fy_common_voice_94"
-#model_id="wav2vec2_fy_common_voice_95"
-#model_id="wav2vec2_fy_common_voice_96"
-#model_id="wav2vec2_fy_common_voice_97"
-#model_id="wav2vec2_fy_common_voice_98"
-#model_id="wav2vec2_fy_common_voice_99"
-
-
-#model_id="wav2vec2_fy_common_voice_107"
-#model_id="wav2vec2_fy_common_voice_108"
-#model_id="wav2vec2_fy_common_voice_110"
-#model_id="wav2vec2_fy_common_voice_111"
-
-
-
-#model_id="wav2vec2_fy_common_voice_1"
-#model_id="wav2vec2_fy_nl_de_LID_common_voice_2"
-#model_id="wav2vec2_ur_common_voice_1"
-#model_id="wav2vec2_ur_fa_ps_common_voice_2"
-#model_id="wav2vec2_fy_nl_LID_common_voice_15"
-#model_id="wav2vec2_gl_it_es_LID_common_voice_4"
-#model_id="wav2vec2_uk_common_voice_5"
-
-#model_id="wav2vec2_gl_it_es_common_voice_4"
-#model_id="wav2vec2_fy_new_common_voice_5"
-#model_id="wav2vec2_fy_nl_de_new_common_voice_6"
-#model_id="wav2vec2_da_common_voice_7"
 
 model_id="XLSR_dualpathfe_temp_1"
 
@@ -90,37 +25,37 @@ from datasets import load_dataset # load_metric
 #common_voice = common_voice.remove_columns(['client_id', 'up_votes','down_votes', 'age', 'gender','accent','locale','segment'])
 
 
-#base_url_test="/data/p312702/common_voice_17_germanic/test_iranian/"
-#base_url_test="/data/p312702/common_voice_17_germanic/test_romance"
-base_url_test="/data/p312702/common_voice_17_germanic/test_fy_fr"
-#base_url_test="/home3/p312702/test_scandinavian"
-#base_url_test ="/data/p312702/common_voice_17_germanic/validation_romance"
-#base_url_test = "/data/p312702/from_wietse/test/"
+#base_url_test="/data/common_voice_17_germanic/test_iranian/"
+#base_url_test="/data/common_voice_17_germanic/test_romance"
+base_url_test="/data/common_voice_17_germanic/test_fy_fr"
+#base_url_test="/home3/test_scandinavian"
+#base_url_test ="/data/common_voice_17_germanic/validation_romance"
+#base_url_test = "/data/test/"
 
 
 
-#base_url_test="/data/p312702/from_wietse/validation"
+#base_url_test="/data/validation"
 
-#base_url_test="/data/p312702/SPRAAKLAB/R_2_3_4_8_9_10_13_14_17_18_19_DUTCH"
+#base_url_test="/data/SPRAAKLAB/R_2_3_4_8_9_10_13_14_17_18_19_DUTCH"
 #base_url_test="/data/p312702/SPRAAKLAB/R_1_5_6_7_11_12_15_16_20_FRYSK"
 
-#base_url_test="/data/p312702/SPRAAKLAB/R_1_5_6_WOOD_FRYSK"
-#base_url_test="/data/p312702/SPRAAKLAB/R_7_12_CLAY_FRYSK"
-#base_url_test="/data/p312702/SPRAAKLAB/R_15_16_20_SOUTH_FRYSK"
+#base_url_test="/data/SPRAAKLAB/R_1_5_6_WOOD_FRYSK"
+#base_url_test="/data/SPRAAKLAB/R_7_12_CLAY_FRYSK"
+#base_url_test="/data/SPRAAKLAB/R_15_16_20_SOUTH_FRYSK"
 
 
-#base_url_test="/data/p312702/SPRAAKLAB/R_2_3_4_WOOD_DUTCH"
-#base_url_test="/data/p312702/SPRAAKLAB/R_8_10_CLAY_DUTCH"
-#base_url_test="/data/p312702/SPRAAKLAB/R_9_13_14_SOUTH_DUTCH"
+#base_url_test="/data/SPRAAKLAB/R_2_3_4_WOOD_DUTCH"
+#base_url_test="/data/SPRAAKLAB/R_8_10_CLAY_DUTCH"
+#base_url_test="/data/SPRAAKLAB/R_9_13_14_SOUTH_DUTCH"
 
-#base_url_test="/data/p312702/SPRAAKLAB/R_2_3_4_8_10_9_13_14_DUTCH_new"
-#base_url_test="/data/p312702/SPRAAKLAB/R_1_5_6_7_12_15_16_20_FRYSK_new"
-#base_url_test="/data/p312702/from_wietse/seen_spraklab_dutch_53"
-#base_url_test="/data/p312702/from_wietse/seen_spraklab_frysk_53"
-#base_url_test="/data/p312702/from_wietse/unseen_spraaklab_data_dutch_stimuli"
-#base_url_test="/data/p312702/from_wietse/unseen_spraaklab_data_frysk_stimuli"
-#base_url_test="/data/p312702/from_wietse/spraaklab_frysk_50_53_combined"
-#base_url_test="/data/p312702/from_wietse/spraaklab_dutch_50_53_combined"
+#base_url_test="/data/SPRAAKLAB/R_2_3_4_8_10_9_13_14_DUTCH_new"
+#base_url_test="/data/SPRAAKLAB/R_1_5_6_7_12_15_16_20_FRYSK_new"
+#base_url_test="/data/seen_spraklab_dutch_53"
+#base_url_test="/data/seen_spraklab_frysk_53"
+#base_url_test="/data/unseen_spraaklab_data_dutch_stimuli"
+#base_url_test="/data/unseen_spraaklab_data_frysk_stimuli"
+#base_url_test="/data/spraaklab_frysk_50_53_combined"
+#base_url_test="/data/spraaklab_dutch_50_53_combined"
 
 
 
@@ -280,10 +215,10 @@ cv_frisian_test=cv_frisian_test.map(remove_special_characters)
 
 from transformers import Wav2Vec2CTCTokenizer
 
-#tokenizer = Wav2Vec2CTCTokenizer.from_pretrained("/data/p312702/from_wietse/"+model_id, unk_token="[UNK]", pad_token="[PAD]", word_delimiter_token="|")
-#tokenizer = Wav2Vec2CTCTokenizer('/data/p312702/from_wietse/wav2vec2_fy_common_voice_94/vocab.json', unk_token="[UNK]", pad_token="[PAD]", word_delimiter_token="|")
-tokenizer = Wav2Vec2CTCTokenizer.from_pretrained('/data/p312702/from_wietse/'+model_id, unk_token="[UNK]", pad_token="[PAD]", word_delimiter_token="|")
-#tokenizer = Wav2Vec2CTCTokenizer.from_pretrained('/data/p312702/from_wietse/'+model_id, unk_token="[UNK]", pad_token="[PAD]", word_delimiter_token="|")
+#tokenizer = Wav2Vec2CTCTokenizer.from_pretrained("/data//"+model_id, unk_token="[UNK]", pad_token="[PAD]", word_delimiter_token="|")
+#tokenizer = Wav2Vec2CTCTokenizer('/data/wav2vec2_fy_common_voice_94/vocab.json', unk_token="[UNK]", pad_token="[PAD]", word_delimiter_token="|")
+tokenizer = Wav2Vec2CTCTokenizer.from_pretrained('/data/'+model_id, unk_token="[UNK]", pad_token="[PAD]", word_delimiter_token="|")
+#tokenizer = Wav2Vec2CTCTokenizer.from_pretrained('/data/'+model_id, unk_token="[UNK]", pad_token="[PAD]", word_delimiter_token="|")
 
 
 from transformers import Wav2Vec2Processor, Wav2Vec2FeatureExtractor
@@ -350,17 +285,17 @@ from transformers import Wav2Vec2ForCTC, Wav2Vec2Processor
 
 
 #processor = Wav2Vec2Processor(feature_extractor=feature_extractor, tokenizer=tokenizer)
-#processor = Wav2Vec2Processor.from_pretrained("/data/p312702/from_wietse/"+model_id) 
-#model = Wav2Vec2ForCTC.from_pretrained("/data/p312702/from_wietse/"+model_id).cuda() #"/checkpoint-"+target_checkpoint).cuda() # "Reihaneh/wav2vec2_frisian_common_voice_"+model_number).cuda()
+#processor = Wav2Vec2Processor.from_pretrained("/data/"+model_id) 
+#model = Wav2Vec2ForCTC.from_pretrained("/data//"+model_id).cuda() #"/checkpoint-"+target_checkpoint).cuda() # "Reihaneh/wav2vec2_frisian_common_voice_"+model_number).cuda()
 
 #from transformers import AutoFeatureExtractor
 
-#feature_extractor = AutoFeatureExtractor.from_pretrained("/data/p312702/from_wietse/"+model_id,trust_remote_code=True)
+#feature_extractor = AutoFeatureExtractor.from_pretrained("/data/"+model_id,trust_remote_code=True)
 
 #feature_extractor=model.wav2vec2.feature_extractor
 from transformers import Wav2Vec2FeatureExtractor
 
-feature_extractor = Wav2Vec2FeatureExtractor.from_pretrained("/data/p312702/from_wietse/"+model_id)
+feature_extractor = Wav2Vec2FeatureExtractor.from_pretrained("/data/"+model_id)
 #print(type(feature_extractor))
 
 
@@ -368,18 +303,18 @@ feature_extractor = Wav2Vec2FeatureExtractor.from_pretrained("/data/p312702/from
 processor = Wav2Vec2Processor(feature_extractor=feature_extractor, tokenizer=tokenizer)
 #from transformers import Wav2Vec2Processor
 
-#processor = Wav2Vec2Processor.from_pretrained("/data/p312702/from_wietse/wav2vec2_fy_common_voice_91")
+#processor = Wav2Vec2Processor.from_pretrained("/data/wav2vec2_fy_common_voice_91")
 
 
-#model = Wav2Vec2ForCTCDualFEConv.from_pretrained("/data/p312702/from_wietse/"+model_id).cuda()
-#model = Wav2Vec2ForCTC.from_pretrained("/data/p312702/from_wietse/"+model_id).cuda()
-model = Wav2Vec2ForCTCDualFEAdd.from_pretrained("/data/p312702/from_wietse/"+model_id).cuda() 
+#model = Wav2Vec2ForCTCDualFEConv.from_pretrained("/data/"+model_id).cuda()
+#model = Wav2Vec2ForCTC.from_pretrained("/data/"+model_id).cuda()
+model = Wav2Vec2ForCTCDualFEAdd.from_pretrained("/data/"+model_id).cuda() 
 
 
 
 #model.wav2vec2.feature_extractor = DualFEAdd(model.wav2vec2.feature_extractor)
 
-#model = model.from_pretrained("/data/p312702/from_wietse/"+model_id).cuda()
+#model = model.from_pretrained("/data/"+model_id).cuda()
 
 #model.to("cuda")
 
@@ -426,9 +361,9 @@ def compute_metrics(pred):
 
 language_ids=[]
 
-processor= Wav2Vec2Processor.from_pretrained("/data/p312702/from_wietse/"+model_id) #"Reihaneh/wav2vec2_frisian_common_voice_"+model_number)
+processor= Wav2Vec2Processor.from_pretrained("/data/"+model_id) #"Reihaneh/wav2vec2_frisian_common_voice_"+model_number)
 
-#processor= Wav2Vec2Processor.from_pretrained("/data/p312702/from_wietse/"+model_id) #"Reihaneh/wav2vec2_frisian_common_voice_"+model_number)
+#processor= Wav2Vec2Processor.from_pretrained("/data/"+model_id) #"Reihaneh/wav2vec2_frisian_common_voice_"+model_number)
  
 
 def map_to_result(batch):
@@ -465,7 +400,7 @@ def map_to_result(batch):
   print(batch["sentence"])
   return batch
 '''
-#processor = Wav2Vec2Processor.from_pretrained("/data/p312702/from_wietse/"+model_id) #"Reihaneh/wav2vec2_frisian_common_voice_"+model_number)
+#processor = Wav2Vec2Processor.from_pretrained("/data/"+model_id) #"Reihaneh/wav2vec2_frisian_common_voice_"+model_number)
 
 
 
